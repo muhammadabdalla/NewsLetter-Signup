@@ -12,7 +12,7 @@ app.use(express.static('build'));
 
 app.get("/",function (req, res){
 
-res.sendFile(__dirname+"/Signup.html");
+res.sendFile(__dirname+"/signup.html");
 
 
 })
