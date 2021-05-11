@@ -16,9 +16,9 @@ res.sendFile(__dirname+"/signup.html");
 
 
 })
-app.get('*', function (req, res) {
-  res.sendFile('signup.html');
-});
+// app.get('*', function (req, res) {
+//   res.sendFile('signup.html');
+// });
 
 app.post("/",function(req,res){
 const first=req.body.first
