@@ -8,7 +8,7 @@ const app =express()
 
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(express.static("puplic"))
-
+app.use(express.static('build'));
 
 app.get("/",function (req, res){
 
@@ -16,7 +16,9 @@ res.sendFile(__dirname+"/Signup.html");
 
 
 })
-
+app.get('*', function (req, res) {
+  res.sendFile('signup.html');
+});
 
 app.post("/",function(req,res){
 const first=req.body.first
